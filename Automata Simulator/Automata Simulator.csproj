@@ -1,0 +1,279 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E6800B1D-5CE0-415D-BF52-B01AF3155B52}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Automata_Simulator</RootNamespace>
+    <AssemblyName>Automata Simulator</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <Utf8Output>true</Utf8Output>
+    <ExpressionBlendVersion>4.0.30816.0</ExpressionBlendVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="RibbonControlsLibrary" />
+    <Reference Include="Microsoft.Windows.Shell" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="DfaTransitionDiagram.cs" />
+    <Compile Include="Extensions\Screenshot.cs" />
+    <Compile Include="Grammar.cs" />
+    <Compile Include="Gui Coding\Grammar GUI.cs" />
+    <Compile Include="Gui Coding\Machine GUI.cs" />
+    <Compile Include="Gui Coding\Pda GUI.cs" />
+    <Compile Include="MealyTransitionDiagram.cs" />
+    <Compile Include="MooreTransitionDiagram.cs" />
+    <Compile Include="NfaTransitionDiagram.cs" />
+    <Compile Include="Pda.cs" />
+    <Compile Include="State.cs" />
+    <Compile Include="Transition.cs" />
+    <Compile Include="TransitionDiagram.cs" />
+    <Compile Include="TuringTransitionDiagram.cs" />
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\state.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\trans.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\startArrow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\arrow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\initial state.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\final state.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\ok.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\clear.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\select.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Null Closure.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\null.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\reverse.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\break.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\stat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\rename.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\v.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\h.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\remove null.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\nfa to dfa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\minimize dfa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\complement.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\separator.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\first.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\follow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\remove left rec.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\useless.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\unit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\breakpt.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\remove left factoring.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\open2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\open.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\mealytomoore.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\mooretomealy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\dfa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\nfa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\moore.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Grammar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\mealy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\pda.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\turing.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\machine.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\new.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\load.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\save.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\export.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\image.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\exit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\saveas.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\Debug\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
